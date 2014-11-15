@@ -109,4 +109,5 @@ stdint.h 与 inttypes.h 之间貌似存在着争执，inttypes.h 是 C99 提出�
 8. uint64_t
 
 [1] http://en.wikipedia.org/wiki/Stdint.h#stdint.h
+
 [2] http://blog.csdn.net/zhengxinjian_2009/article/details/6729342
