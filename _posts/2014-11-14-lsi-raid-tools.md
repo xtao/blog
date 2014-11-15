@@ -1,6 +1,6 @@
 ---
 layout: post
-title: LSI RAID Tools
+title: LSI RAID tools
 description: "LSI RAID 卡工具总结"
 modified: 2014-11-14
 category: articles
