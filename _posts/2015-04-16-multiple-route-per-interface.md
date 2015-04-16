@@ -9,6 +9,17 @@ comments: true
 share: true
 ---
 
+一台机器有多块网卡，给每个网卡都分配了一个外网 IP，现在需要独立使用每个 IP，
+默认的策略是不行的，从网上找了一下解决办法，主要有 2 种。
+
+## 1. rp_filter
+
+~~~
+sudo sysctl net.ipv4.conf.all.rp_filter=2
+~~~
+
+## 2. route table
+
 ~~~
 echo "1 eth1" >> /etc/iproute2/rt_tables
 
