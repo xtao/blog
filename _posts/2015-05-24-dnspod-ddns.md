@@ -37,28 +37,30 @@ share: true
 1. 查询 domain id & record id
 
     * 获取 domain id
-    ~~~
+
+    {% highlight bash %}
     curl -v https://dnsapi.cn/Domain.List -d "login_token=API_TOKEN&format=json"
-    ~~~
+    {% endhighlight %}
 
     * 获取 domain id 下面的 record id
-    ~~~
+
+    {% highlight bash %}
     curl -k https://dnsapi.cn/Record.List -d "login_token=API_TOKEN&domain_id=DOMAIN_ID&format=json"
-    ~~~
+    {% endhighlight %}
 
 1. 在 Linux 主机上加一个 cron
 
 
     我设置的是一个小时更新一次，另外，在访问 Recorde.Ddns 这个 URL 的时候，DNSPod 会自动记录你的公网 IP 的，所以用起来非常方便。注意不要访问太频繁，否则会被封禁的。
 
-    ~~~
+    {% highlight bash %}
     sudo touch /etc/cron.d/dnspod
     cat /etc/cron.d/dnspod
     * /1 * * * root curl -X POST https://dnsapi.cn/Record.Ddns -d "login_token=API_TOKEN&format=json&domain_id=DOMAIN_ID&record_id=RECORD_ID&record_line=默认&sub_domain=SUB_DOMAIN"
-    ~~~
+    {% endhighlight %}
 
 1. 测试
 
-    ~~~
+    {% highlight bash %}
     sudo run-parts -v /etc/cron.d
-    ~~~
+    {% endhighlight %}
