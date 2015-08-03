@@ -25,23 +25,23 @@ share: true
 * initialize protocol
 * initialize signal
 * check binglog(wal)
- * lock binlog dir
- * initialize binlog(wal)
- * replay binlog protocol
+    * lock binlog dir
+    * initialize binlog(wal)
+    * replay binlog protocol
 * start service # 这个操作之前， btd 都不会响应客户端的请求
 
 ## 主要数据结构
 * Server
- * wal
- * sock
- * conns(Heap)
+    * wal
+    * sock
+    * conns(Heap)
 
     系统默认只有一个 server 对象。wal 是 Beanstalkd 实现的一个 binlog 的对象。
 
 * Conn
- * srv
- * sock
- * tube
+    * srv
+    * sock
+    * tube
 
     连接与 tube 之间的关系。每个连接都会有对应的 tube。
 
