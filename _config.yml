@@ -6,7 +6,6 @@ description: XTao's Blog
 logo: site-logo.png
 search: true
 url: http://blog.xtao.me
-comments: true
 
 # Jekyll configuration
 
@@ -35,7 +34,7 @@ owner:
   name: XTao
   avatar: xtao/xtao.jpg
   email: xutao881001@gmail.com
-  disqus_shortname: xtao-blog
+  disqus-shortname: xtao-blog
   twitter: xtao
   facebook: #username
   github: xtao
