@@ -5,7 +5,7 @@ locale: en_US
 description: XTao's Blog
 logo: site-logo.png
 search: true
-url: http://xtao.blog.me
+url: http://blog.xtao.me
 comments: true
 
 # Jekyll configuration
